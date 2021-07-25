@@ -35,6 +35,7 @@ class AssigmentResource extends JsonResource
         //return parent::toArray($request);
         return [
             'id' => $this->id,
+            'registration_id' => $this->registration_id,
             'comentario' => $this->description,
             'start' => $start,
             'end' => $end,
