@@ -16,7 +16,7 @@ services:
     #   LETSENCRYPT_HOST: homey.apps.com.pe,www.homey.apps.com.pe
     #   VIRTUAL_HOST: homey.apps.com.pe,www.homey.apps.com.pe
     ports:
-      - 80:80
+      - 8808:80
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
@@ -32,7 +32,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - 3306:3306
+      - 33066:3306
     environment:
       MYSQL_DATABASE: laravel
       MYSQL_USER: root
