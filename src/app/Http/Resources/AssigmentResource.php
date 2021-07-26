@@ -15,30 +15,19 @@ class AssigmentResource extends JsonResource
      */
     public function toArray($request)
     {
-
-        if (!is_null($this->start)) {            
-            $start = new Carbon($this->start);
-            $start = $start->toRfc7231String();
-        }
-        else{
-            $start = $this->start;
-        }
-
-        if (!is_null($this->end)) {            
-            $end = new Carbon($this->end);
-            $end = $end->toRfc7231String();
-        }
-        else{
-            $end = $this->end;
-        }
-
         //return parent::toArray($request);
         return [
             'id' => $this->id,
             'registration_id' => $this->registration_id,
-            'comentario' => $this->description,
-            'start' => $start,
-            'end' => $end,
+            'specialty' => $this->specialty,
+            'processor' => $this->processor,
+            'customer' => $this->customer,
+            'address' => $this->address,
+            'description' => $this->description,
+            'comment' => $this->comment,
+            'date' => $this->date,
+            'start' => $this->start,
+            'end' => $this->end,
         ];
     }
 }

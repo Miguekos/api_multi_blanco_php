@@ -40,21 +40,7 @@ class AssigmentRepository
      * @return Assigment
      */
     public function create($data): Assigment
-    {
-        $data['description'] = isset($data["comentario"]) ? $data["comentario"] : "";
-        
-        if (isset($data['start'])) {
-            $date = new Carbon($data['start']);
-            $data['start'] = $date->format("Y-m-d H:i:s");
-        }
-
-        if (isset($data['end'])) {
-            $date = new Carbon($data['end']);
-            $data['end'] = $date->format("Y-m-d H:i:s");
-        }
-        
-        //$carbon->toRfc7231String();
-
+    {           
         return Assigment::create($data);
     }
 
@@ -82,7 +68,8 @@ class AssigmentRepository
         $assigment = $this->find($id);
         $assigment->update($data);
 
-        return $assigment;
+        $users = new UserCollection(User::all());
+        return $users;
     }
 
 

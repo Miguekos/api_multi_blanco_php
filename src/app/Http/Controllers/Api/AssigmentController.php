@@ -61,15 +61,9 @@ class AssigmentController extends Controller
      * @param  \App\Models\Assigment  $assigment
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAssigmentRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        //dd($request->all());
-        $assigment = $this->assigmentRepository->update($id, $request->all());
-
-        return response()->json([
-            'data'    => $assigment,
-            'message' => 'Success, assigment successfully updated.'
-        ], '200');
+        return $this->assigmentRepository->update($id, $request->all());
     }
 
     /**

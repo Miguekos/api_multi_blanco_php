@@ -21,10 +21,16 @@ class CreateAssigmentsTable extends Migration
             $table->unsignedBigInteger('specialty_id')->nullable();
             $table->unsignedBigInteger('status_id')->nullable();
             $table->string('registration_id')->nullable();
-            $table->string('description');
+            $table->string('customer')->nullable();
+            $table->string('processor')->nullable();
+            $table->string('specialty')->nullable();
+            $table->string('description')->nullable();
+            $table->string('comment')->nullable();
+            $table->string('address')->nullable();
             $table->string('policy_number')->nullable();
             $table->string('insurance_company')->nullable();
             $table->string('insurance_phone')->nullable();
+            $table->datetime('date')->nullable();
             $table->datetime('start')->nullable();
             $table->datetime('end')->nullable();
             $table->timestamps();
