@@ -24,6 +24,8 @@ class AssigmentResource extends JsonResource
             'processor' => $this->processor,
             'customer' => $this->customer,
             'address' => $this->address,
+            'zip_code' => $this->zip_code,
+            'phone' => $this->phone,
             'description' => $this->description,
             'comment' => $this->comment,
             'date' => $this->date,

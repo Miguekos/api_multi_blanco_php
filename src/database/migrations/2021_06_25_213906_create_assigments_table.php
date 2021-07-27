@@ -27,6 +27,8 @@ class CreateAssigmentsTable extends Migration
             $table->string('description')->nullable();
             $table->string('comment')->nullable();
             $table->string('address')->nullable();
+            $table->string('zip_code')->nullable();
+            $table->string('phone')->nullable();
             $table->string('policy_number')->nullable();
             $table->string('insurance_company')->nullable();
             $table->string('insurance_phone')->nullable();

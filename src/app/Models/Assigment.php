@@ -28,6 +28,8 @@ class Assigment extends Model
         'description',
         'comment',
         'address',
+        'zip_code',
+        'phone',
         'policy_number',
         'insurance_company',
         'insurance_phone',
