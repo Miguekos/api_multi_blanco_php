@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use App\Http\Resources\AssigmentResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserResource extends JsonResource
+class SpecialtyResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -20,10 +20,6 @@ class UserResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'zipcode' => $this->zip_code,
-            'colorPair' => $this->colorPair,
-            //'specialties' => SpecialtyResource::collection($this->specialties),
-            'gtArray' => AssigmentResource::collection($this->assigmentsOperator),
         ];
     }
 }

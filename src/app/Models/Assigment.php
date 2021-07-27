@@ -44,6 +44,14 @@ class Assigment extends Model
         return $this->belongsTo(User::class, 'operator_id');
     }
 
+    /**
+     * The status to this assigment.
+     */
+    public function status()
+    {
+        return $this->belongsTo(AssigmentStatus::class, 'status_id');
+    }
+
 
     public function setCustomerAttribute($value)
     {

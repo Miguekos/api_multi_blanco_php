@@ -29,7 +29,7 @@ class AssigmentRepository
 
         $users = new UserCollection($resources);
         */
-        $users = new UserCollection(User::all());
+        $users = new UserCollection(User::role('operator')->get());
         return $users;
     }
 
@@ -41,6 +41,7 @@ class AssigmentRepository
      */
     public function create($data): Assigment
     {           
+        $data['status_id'] = 2;
         return Assigment::create($data);
     }
 

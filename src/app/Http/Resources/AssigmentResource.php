@@ -19,6 +19,7 @@ class AssigmentResource extends JsonResource
         return [
             'id' => $this->id,
             'registration_id' => $this->registration_id,
+            'status' => $this->status->name,
             'specialty' => $this->specialty,
             'processor' => $this->processor,
             'customer' => $this->customer,
