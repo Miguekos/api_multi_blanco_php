@@ -18,7 +18,7 @@ class UserController extends Controller
 
     public function __construct(UserRepository $userRepository)
     {
-        $this->middleware('auth:api', ['except' => ['index', 'show']]);
+        //$this->middleware('auth:api', ['except' => ['index', 'show']]);
         $this->userRepository = $userRepository;
     }
     /**
@@ -44,7 +44,29 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {   
         $request->validated();
-        $user = $this->userRepository->create($request->all());
+        $data = $request->all();
+        $data['password'] = bcrypt(123456);
+        $data['colorPair'] = isset($data['colorPair']) ? $data['colorPair'] : '{
+                                "dark": "rgb(11, 209, 171,0.8)",
+                                "light": "rgb(11, 209, 171,0.1)"
+                            }';
+
+        $user = $this->userRepository->create($data);
+
+        switch ($data['role_id']) {
+            case 1:
+                $user->assignRole('admin');
+                break;
+            case 2:
+                $user->assignRole('processor');
+                break;
+            case 3:
+                $user->assignRole('operator');
+                break;
+            default:
+                break;
+        }
+        
 
         return response()->json(['message' => 'User created succesfully'], 201);
     }

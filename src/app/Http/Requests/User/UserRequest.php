@@ -14,7 +14,7 @@ class UserRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::check();
+        return true;
     }
 
     /**
@@ -27,7 +27,8 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required|max:50',
             'email' => 'required|email|unique:users',
-            'password'   => 'required|string|min:6|confirmed',
+            'role_id' => 'required|integer',
+            //'password'   => 'required|string|min:6|confirmed',
         ];
     }
 }

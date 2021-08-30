@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Admin',
             'email'             => 'admin@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'remember_token'    => Str::random(60),
         ]);
@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Processor',
             'email'             => 'processor@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'remember_token'    => Str::random(60),
         ]);
@@ -36,7 +36,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Roberto',
             'email'             => 'roberto@gmail.com',
-            'password'          => 123456,
+            'password'          => bcrypt(123456),
             'colorPair'         => '{"dark": "rgb(11, 209, 171,0.8)","light": "rgb(11, 209, 171,0.1)"}',
             'email_verified_at' => now(),
             'remember_token'    => Str::random(60),
@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Santiago',
             'email'             => 'santiago@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'colorPair'         => '{"dark": "rgb(11, 209, 171,0.8)","light": "rgb(11, 209, 171,0.1)"}',
             'remember_token'    => Str::random(60),
@@ -58,7 +58,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Piter',
             'email'             => 'piter@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'colorPair'         => '{"dark": "rgb(11, 209, 171,0.8)","light": "rgb(11, 209, 171,0.1)"}',
             'remember_token'    => Str::random(60),
@@ -69,7 +69,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Julio',
             'email'             => 'julio@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'colorPair'         => '{"dark": "rgb(11, 209, 171,0.8)","light": "rgb(11, 209, 171,0.1)"}',
             'remember_token'    => Str::random(60),
@@ -80,7 +80,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Junior',
             'email'             => 'junior@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'colorPair'         => '{"dark": "rgb(11, 209, 171,0.8)","light": "rgb(11, 209, 171,0.1)"}',
             'remember_token'    => Str::random(60),
@@ -91,7 +91,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Fabian', 
             'email'             => 'fabian@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'colorPair'         => '{"dark": "rgb(11, 209, 171,0.8)","light": "rgb(11, 209, 171,0.1)"}',
             'remember_token'    => Str::random(60),
@@ -103,7 +103,7 @@ class UserSeeder extends Seeder
         $user = User::create([
             'name'              => 'Larry',
             'email'             => 'larry@gmail.com',
-            'password'          => 123456,  
+            'password'          => bcrypt(123456),  
             'email_verified_at' => now(),
             'colorPair'         => '{"dark": "rgb(11, 209, 171,0.8)","light": "rgb(11, 209, 171,0.1)"}',
             'remember_token'    => Str::random(60),
